@@ -16,7 +16,7 @@ jobs:
 
   Segundo-Job:
     name: Exemplo desegundo job
-    runs-on: windows
+    runs-on: windows-latest
     needs: Exemplo-Informacoes-Runner
     steps:
       - run: echo "${{ runner.os }}"
