@@ -13,3 +13,10 @@ jobs:
 
       # Qual repositorio e workflow
       - run:  echo "${{ github.ref }}  repo ${{ github.repository }}"
+
+  Segundo-Job:
+    name: Exemplo desegundo job
+    runs-on: windows
+    needs: Exemplo-Informacoes-Runner
+    steps:
+      - run: echo "${{ runner.os }}"
