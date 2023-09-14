@@ -9,7 +9,7 @@ jobs:
       - run: echo "${{ runner.os }}"
 
       # Qual evento iniciou o workflow?
-      - run: echo "{{ github.event_name }} evento"
+      - run: echo "${{ github.event_name }} evento"
 
       # Qual repositorio e workflow
-      - run:  echo "{{ github.ref }}  repo ${{ github.repository }}"
+      - run:  echo "${{ github.ref }}  repo ${{ github.repository }}"
