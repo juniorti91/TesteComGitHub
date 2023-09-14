@@ -1,0 +1,15 @@
+name: Exemplo Actions com Git
+on: push
+jobs:
+  Exemplo-Informacoes-Runner:
+    name: Exemplo Informacoes GitHub Actions Runner
+    runs-on: ubuntu-latest
+    steps:
+      # Qual é o ssitema operacioal do Runner?
+      - run: echo "${{ runner.os }}"
+
+      # Qual evento iniciou o workflow?
+      - run: echo "{{ github.event_name }} evento"
+
+      # Qual repositorio e workflow
+      - run:  echo "{{ github.ref }}  repo ${{ github.repository }}"
